@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fizzy Fix — Arizona's Retro Mobile Dirty Soda Trailer</title>
+  <meta name="description" content="Fizzy Fix is a retro pink mobile soda trailer rolling through the East Valley with dirty sodas, energizers, and refreshers. Book us for weddings, watch parties, baby showers, and more." />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="public/images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="public/images/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="public/images/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="public/images/favicon.ico" />
+
+  <!-- Open Graph / social cards -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Fizzy Fix, Arizona's Mobile Dirty Soda Trailer" />
+  <meta property="og:description" content="Energizers, dirty sodas, and refreshers from the pinkest trailer in the Valley. Book your event." />
+  <meta property="og:image" content="public/images/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fizzy Fix, Arizona's Mobile Dirty Soda Trailer" />
+  <meta name="twitter:description" content="Energizers, dirty sodas, and refreshers from the pinkest trailer in the Valley. Book your event." />
+  <meta name="twitter:image" content="public/images/logo.png" />
+
+  <!-- Google Fonts: Caprasimo (display, chunky retro slab with hand-designed wedge details), Caveat Brush (handwritten accent), Nunito (body/UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Caveat+Brush&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css?v=meet20260515" />
+</head>
+<body>
+
+  <!-- Thin checker strip at top of page (accent only) -->
+  <div class="checker-strip" aria-hidden="true"></div>
+
+  <!-- ============ 1. STICKY TOP BANNER ============ -->
+  <div class="top-banner" role="status" aria-live="polite">
+    <p class="top-banner__text" id="topBannerText">DM @FIZZYFIXAZ TO LOCK IN YOUR DATE</p>
+  </div>
+
+  <!-- ============ 2. NAV ============ -->
+  <header class="nav">
+    <div class="nav__inner container">
+      <a href="#top" class="nav__logo" aria-label="Fizzy Fix home">
+        <img src="public/images/logo.png" alt="Fizzy Fix mobile dirty soda trailer" />
+      </a>
+
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="navLinks" class="nav__links">
+        <a href="#menu">Menu</a>
+        <a href="#events">Events</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+        <a href="#book" class="btn btn--primary nav__cta">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO: centered text + full-bleed photo, gradient bg ============ -->
+    <section class="hero">
+      <div class="hero__text">
+        <p class="hero__eyebrow">Arizona's cutest mobile soda trailer</p>
+        <h1 class="hero__headline">Bring the Bubbles.</h1>
+        <p class="hero__subhead">Energizers. Dirty sodas. Refreshers. Pulled fresh from the pinkest trailer in the Valley.</p>
+        <a href="#book" class="btn btn--primary hero__cta">Book Your Event</a>
+      </div>
+      <div class="hero__photo">
+        <img src="public/images/hero-trailer.jpg" alt="Fizzy Fix owners standing in front of the pink vintage mobile soda trailer in Arizona" />
+      </div>
+    </section>
+
+    <!-- Checker stripe divider: hero -> as-seen -->
+    <div class="divider-checker" aria-hidden="true"></div>
+
+    <!-- ============ AS SEEN AT — marquee band, framed by checker dividers ============ -->
+    <section class="as-seen" aria-label="Featured at">
+      <p class="as-seen__label">As seen at</p>
+      <div class="as-seen__marquee">
+        <div class="as-seen__track" aria-hidden="true">
+          <span class="as-seen__item">Phoenix Suns games</span>
+          <span class="as-seen__sep">✦</span>
+          <span class="as-seen__item">Desert Moms Club</span>
+          <span class="as-seen__sep">✦</span>
+          <span class="as-seen__item">Valley Girl Pop-Up</span>
+          <span class="as-seen__sep">✦</span>
+          <span class="as-seen__item">Backyard weddings</span>
+          <span class="as-seen__sep">✦</span>
+          <span class="as-seen__item">School markets</span>
+          <span class="as-seen__sep">✦</span>
+          <span class="as-seen__item">Corporate activations</span>
+          <span class="as-seen__sep">✦</span>
+          <!-- Duplicated for seamless infinite scroll -->
+          <span class="as-seen__item">Phoenix Suns games</span>
+          <span class="as-seen__sep">✦</span>
+          <span class="as-seen__item">Desert Moms Club</span>
+          <span class="as-seen__sep">✦</span>
+          <span class="as-seen__item">Valley Girl Pop-Up</span>
+          <span class="as-seen__sep">✦</span>
+          <span class="as-seen__item">Backyard weddings</span>
+          <span class="as-seen__sep">✦</span>
+          <span class="as-seen__item">School markets</span>
+          <span class="as-seen__sep">✦</span>
+          <span class="as-seen__item">Corporate activations</span>
+          <span class="as-seen__sep">✦</span>
+        </div>
+      </div>
+      <!-- Screen-reader-only static list for accessibility -->
+      <p class="sr-only">Featured at Phoenix Suns games, Desert Moms Club, Valley Girl Pop-Up, backyard weddings, school markets, and corporate activations.</p>
+    </section>
+
+    <!-- Checker stripe divider: as-seen -> about -->
+    <div class="divider-checker" aria-hidden="true"></div>
+
+    <!-- ============ ABOUT / WHAT IS FIZZY FIX ============ -->
+    <section id="about" class="whatis section">
+      <!-- Centered header -->
+      <header class="container whatis__header">
+        <p class="whatis__eyebrow">Meet Fizzy Fix</p>
+        <h2 class="whatis__title">Hey, fizz fam</h2>
+        <p class="whatis__lead">Arizona's cutest mobile soda trailer, family-owned and rolling through the East Valley.</p>
+      </header>
+
+      <!-- Asymmetric 2-column content grid -->
+      <div class="container whatis__inner">
+        <!-- LEFT: Featured photo with floating stat overlay -->
+        <div class="whatis__featured">
+          <div class="whatis__photo">
+            <img src="public/images/shara-counter.jpg" alt="Shara at the Fizzy Fix counter pouring a dirty soda" />
+          </div>
+          <aside class="whatis__stat" aria-label="Track record">
+            <p class="whatis__stat-label">Since July 2025</p>
+            <p class="whatis__stat-num">51+</p>
+            <p class="whatis__stat-meta">events served</p>
+          </aside>
+        </div>
+
+        <!-- RIGHT: Text card + secondary photo -->
+        <div class="whatis__stack">
+          <article class="whatis__card">
+            <span class="whatis__card-tag" aria-hidden="true">the scoop</span>
+            <p class="whatis__body">Fizzy Fix is built on bold, bubbly, bombshell-worthy drinks. Dirty sodas, energizers, and refreshers, all designed to match your event's vibe.</p>
+            <p class="whatis__body">Weddings, watch parties, baby showers, kids' birthdays, corporate activations. Whatever you're throwing, we'll bring the fizz.</p>
+
+            <ul class="chips">
+              <li class="chip">Wedding-ready</li>
+              <li class="chip">Kid-friendly</li>
+              <li class="chip">Phoenix Suns tested</li>
+              <li class="chip">Family-owned</li>
+            </ul>
+          </article>
+
+          <figure class="whatis__photo-small">
+            <img src="public/images/extras/c003.jpg" alt="Two friends cheersing pink and green Fizzy Fix drinks in front of the trailer" />
+            <figcaption class="whatis__photo-small-cap">Cheers, East Valley.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- wave: whatis -> menu (two soft humps) -->
+    <svg class="wave wave--medium" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
+      <rect width="1440" height="100" fill="#F8E8C8" />
+      <path d="M0,55 C240,20 480,75 720,50 S1200,75 1440,55 L1440,100 L0,100 Z" fill="#F5C8C8" />
+    </svg>
+
+    <!-- ============ MENU ============ -->
+    <section id="menu" class="menu section">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">What's on Tap This Month</h2>
+          <p class="section__script">Spring 2026</p>
+        </header>
+
+        <div class="menu__tabs" role="tablist" aria-label="Menu category">
+          <button class="menu__tab is-active" role="tab" aria-selected="true" aria-controls="panel-dirty" data-tab="dirty">Dirty Sodas</button>
+          <button class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-refresh" data-tab="refresh">Refreshers</button>
+          <button class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-energy" data-tab="energy">Energizers</button>
+        </div>
+
+        <!-- DIRTY SODAS -->
+        <div id="panel-dirty" class="menu__panel is-active" role="tabpanel">
+          <p class="menu__tagline">Bold, creamy, over-the-top.</p>
+          <div class="drink-grid">
+            <article class="drink-card">
+              <div class="drink-card__media">
+                <div class="drink-card__media-frame"><img src="public/images/drink-spice.jpg" alt="Spice Spice Baby drink" /></div>
+                <span class="drink-card__badge drink-card__badge--seasonal">Seasonal</span>
+              </div>
+              <h3 class="drink-card__name">Spice Spice Baby</h3>
+              <p class="drink-card__ings">DR PEPPER · VANILLA CREAM · PUMPKIN SPICE · CINNAMON SUGAR RIM</p>
+            </article>
+
+            <article class="drink-card">
+              <div class="drink-card__media">
+                <div class="drink-card__media-frame"><img src="public/images/drink-caramel.jpg" alt="Cozy Caramel drink" /></div>
+              </div>
+              <h3 class="drink-card__name">Cozy Caramel</h3>
+              <p class="drink-card__ings">COKE · SALTED CARAMEL · VANILLA CREAM · BROWN SUGAR</p>
+            </article>
+
+            <article class="drink-card">
+              <div class="drink-card__media">
+                <div class="drink-card__media-frame"><img src="public/images/drink-cider-pour.jpg" alt="Stars Hollow Float drink" /></div>
+                <span class="drink-card__badge drink-card__badge--vegan">Vegan</span>
+              </div>
+              <h3 class="drink-card__name">Stars Hollow Float</h3>
+              <p class="drink-card__ings">ROOT BEER · VANILLA CREAM · CARAMEL DRIZZLE · OAT MILK</p>
+            </article>
+          </div>
+        </div>
+
+        <!-- REFRESHERS -->
+        <div id="panel-refresh" class="menu__panel" role="tabpanel">
+          <p class="menu__tagline">Cool, fruity, sunshine in a cup.</p>
+          <div class="drink-grid">
+            <article class="drink-card">
+              <div class="drink-card__media">
+                <div class="drink-card__media-frame"><img src="public/images/drink-cupid.jpg" alt="Cupid's Choice drink" /></div>
+              </div>
+              <h3 class="drink-card__name">Cupid's Choice</h3>
+              <p class="drink-card__ings">COKE · STRAWBERRY · HALF &amp; HALF · MARSHMALLOW · STRAWBERRY COLD FOAM · SPRINKLES</p>
+            </article>
+
+            <article class="drink-card">
+              <div class="drink-card__media">
+                <div class="drink-card__media-frame"><img src="public/images/drink-callmemaybe.jpg" alt="Call Me Maybe drink" /></div>
+              </div>
+              <h3 class="drink-card__name">Call Me Maybe</h3>
+              <p class="drink-card__ings">SPRITE · STRAWBERRY · RASPBERRY · VANILLA CREAM · FREEZE-DRIED STRAWBERRIES</p>
+            </article>
+
+            <article class="drink-card">
+              <div class="drink-card__media">
+                <div class="drink-card__media-frame"><img src="public/images/drink-xoxo.jpg" alt="XOXO Fizzy Fix drink" /></div>
+                <span class="drink-card__badge drink-card__badge--decaf">No Caffeine</span>
+              </div>
+              <h3 class="drink-card__name">XOXO Fizzy Fix</h3>
+              <p class="drink-card__ings">LEMONADE · SPARKLING WATER · CHERRY · RASPBERRY · EDIBLE GLITTER</p>
+            </article>
+          </div>
+        </div>
+
+        <!-- ENERGIZERS -->
+        <div id="panel-energy" class="menu__panel" role="tabpanel">
+          <p class="menu__tagline">High-octane fuel — Red Bull base, big flavor.</p>
+          <div class="drink-grid">
+            <article class="drink-card">
+              <div class="drink-card__media">
+                <div class="drink-card__media-frame"><img src="public/images/drink-blue-clean.jpg" alt="Blue Crush drink" /></div>
+              </div>
+              <h3 class="drink-card__name">Blue Crush</h3>
+              <p class="drink-card__ings">BLUE RASPBERRY · COCONUT CREAM · RED BULL · LIME</p>
+            </article>
+
+            <article class="drink-card">
+              <div class="drink-card__media">
+                <div class="drink-card__media-frame"><img src="public/images/drink-pink-clean.jpg" alt="Bubblegum Pop drink" /></div>
+              </div>
+              <h3 class="drink-card__name">Bubblegum Pop</h3>
+              <p class="drink-card__ings">STRAWBERRY · BUBBLEGUM SYRUP · CREAM · RED BULL</p>
+            </article>
+
+            <article class="drink-card">
+              <div class="drink-card__media">
+                <div class="drink-card__media-frame"><img src="public/images/drink-teal-cc.jpg" alt="Cotton Candy Cloud drink" /></div>
+                <span class="drink-card__badge drink-card__badge--seasonal">Fan Favorite</span>
+              </div>
+              <h3 class="drink-card__name">Cotton Candy Cloud</h3>
+              <p class="drink-card__ings">BLUE RASPBERRY · COTTON CANDY · LIME · RED BULL</p>
+            </article>
+          </div>
+        </div>
+
+        <p class="menu__footer-cta">
+          Don't see your flavor? <a href="#book">Build your own custom drink &rarr;</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ SIGNATURE DRINK CALLOUT (mascot + animated sparkles) ============ -->
+    <section class="callout-band">
+      <div class="callout-band__sparkles" aria-hidden="true">
+        <svg class="callout-band__sparkle sp-1" viewBox="0 0 24 24"><path d="M12 0 L14 10 L24 12 L14 14 L12 24 L10 14 L0 12 L10 10 Z" fill="#F4B73D"/></svg>
+        <svg class="callout-band__sparkle sp-2" viewBox="0 0 24 24"><path d="M12 0 L14 10 L24 12 L14 14 L12 24 L10 14 L0 12 L10 10 Z" fill="#F5C8C8"/></svg>
+        <svg class="callout-band__sparkle sp-3" viewBox="0 0 24 24"><path d="M12 0 L14 10 L24 12 L14 14 L12 24 L10 14 L0 12 L10 10 Z" fill="#F4B73D"/></svg>
+        <svg class="callout-band__sparkle sp-4" viewBox="0 0 24 24"><path d="M12 0 L14 10 L24 12 L14 14 L12 24 L10 14 L0 12 L10 10 Z" fill="#FBF3E5"/></svg>
+        <svg class="callout-band__sparkle sp-5" viewBox="0 0 24 24"><path d="M12 0 L14 10 L24 12 L14 14 L12 24 L10 14 L0 12 L10 10 Z" fill="#F4B73D"/></svg>
+        <svg class="callout-band__sparkle sp-6" viewBox="0 0 24 24"><path d="M12 0 L14 10 L24 12 L14 14 L12 24 L10 14 L0 12 L10 10 Z" fill="#F5C8C8"/></svg>
+        <svg class="callout-band__sparkle sp-7" viewBox="0 0 24 24"><path d="M12 0 L14 10 L24 12 L14 14 L12 24 L10 14 L0 12 L10 10 Z" fill="#F4B73D"/></svg>
+        <svg class="callout-band__sparkle sp-8" viewBox="0 0 24 24"><path d="M12 0 L14 10 L24 12 L14 14 L12 24 L10 14 L0 12 L10 10 Z" fill="#FBF3E5"/></svg>
+        <svg class="callout-band__sparkle sp-9" viewBox="0 0 24 24"><path d="M12 0 L14 10 L24 12 L14 14 L12 24 L10 14 L0 12 L10 10 Z" fill="#F4B73D"/></svg>
+      </div>
+      <div class="container">
+        <div class="custom-callout">
+          <img class="custom-callout__mascot" src="public/images/mascot-cup-tight.png" alt="Fizzy Fix mascot" />
+          <h3 class="custom-callout__title">Build your event's signature drink</h3>
+          <p class="custom-callout__body">Your colors, your theme, your name on the cup — we'll craft a one-of-a-kind drink and pour it at your event. Available with every package.</p>
+          <a href="#book" id="custom-drink-cta" class="btn btn--coral">Request a Custom Drink</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PACKAGES — PICK YOUR POUR ============ -->
+    <section id="book" class="book section">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">Pick Your Pour</h2>
+          <p class="section__sub">Trailer or cart, choose what fits your space and your guest count.</p>
+        </header>
+
+        <div class="toggle-wrap">
+          <div class="toggle-group" role="tablist" aria-label="Service style">
+            <button class="toggle-group__btn is-active" role="tab" aria-selected="true" data-pkg="trailer">Trailer</button>
+            <button class="toggle-group__btn" role="tab" aria-selected="false" data-pkg="cart">Cart</button>
+          </div>
+        </div>
+
+        <!-- TRAILER -->
+        <div id="pkg-trailer" class="package-panel is-active" role="tabpanel">
+          <div class="pricing">
+            <article class="tier">
+              <h3 class="tier__name">The Lil' Sipper</h3>
+              <p class="tier__meta">2 hrs · 50 drinks</p>
+              <p class="tier__desc">Birthdays, baby showers.</p>
+              <p class="tier__price">From <strong>$450</strong></p>
+              <a href="#inquiry" class="btn btn--primary tier__cta">Book Lil' Sipper</a>
+            </article>
+
+            <article class="tier tier--popular">
+              <span class="tier__badge">Most Loved</span>
+              <h3 class="tier__name">The Fizz Fest</h3>
+              <p class="tier__meta">3 hrs · 100 drinks</p>
+              <p class="tier__desc">Weddings, watch parties.</p>
+              <p class="tier__price">From <strong>$650</strong></p>
+              <a href="#inquiry" class="btn btn--primary tier__cta">Book Fizz Fest</a>
+            </article>
+
+            <article class="tier">
+              <h3 class="tier__name">The Whole Vibe</h3>
+              <p class="tier__meta">Custom · fully tailored</p>
+              <p class="tier__desc">Corporate, activations.</p>
+              <p class="tier__price">From <strong>$1,200</strong></p>
+              <a href="#inquiry" class="btn btn--primary tier__cta">Get a Quote</a>
+            </article>
+          </div>
+        </div>
+
+        <!-- CART -->
+        <div id="pkg-cart" class="package-panel" role="tabpanel">
+          <div class="pricing pricing--two">
+            <article class="tier">
+              <h3 class="tier__name">The Mini Mixer</h3>
+              <p class="tier__meta">90 min · 35 drinks</p>
+              <p class="tier__desc">Office, school parties.</p>
+              <p class="tier__price">From <strong>$300</strong></p>
+              <a href="#inquiry" class="btn btn--primary tier__cta">Book Mini Mixer</a>
+            </article>
+
+            <article class="tier">
+              <h3 class="tier__name">The Cart Crawl</h3>
+              <p class="tier__meta">2 hrs · 60 drinks</p>
+              <p class="tier__desc">Backyard parties, small weddings.</p>
+              <p class="tier__price">From <strong>$450</strong></p>
+              <a href="#inquiry" class="btn btn--primary tier__cta">Book Cart Crawl</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BOOKING SECTION — form + map side-by-side ============ -->
+    <section id="book-area" class="booking-section">
+      <div class="container booking__grid">
+
+        <!-- FORM CARD (left) -->
+        <article class="booking__card booking__form-card">
+          <span class="card-tag card-tag--green">the deets</span>
+          <h3 class="booking__title">Send us your event details</h3>
+          <p class="booking__intro">We reply within 24 hours. Most weekends in spring + fall fill 2 to 3 months out — don't wait too long.</p>
+
+          <form id="inquiry" class="inquiry" action="https://form.jotform.com/250967666007162" method="POST" novalidate>
+
+          <div class="inquiry__row">
+            <label class="field">
+              <span class="field__label">Full Name</span>
+              <input type="text" name="full_name" required />
+            </label>
+            <label class="field">
+              <span class="field__label">Phone</span>
+              <input type="tel" name="phone" required />
+            </label>
+          </div>
+
+          <div class="inquiry__row">
+            <label class="field">
+              <span class="field__label">Email</span>
+              <input type="email" name="email" required />
+            </label>
+            <label class="field">
+              <span class="field__label">Event Address</span>
+              <input type="text" name="event_address" placeholder="Street, city, state, zip" />
+            </label>
+          </div>
+
+          <div class="inquiry__row inquiry__row--three">
+            <label class="field">
+              <span class="field__label">Event Date</span>
+              <input type="date" name="event_date" />
+            </label>
+            <label class="field">
+              <span class="field__label">Start Time</span>
+              <input type="time" name="start_time" />
+            </label>
+            <label class="field">
+              <span class="field__label">End Time</span>
+              <input type="time" name="end_time" />
+            </label>
+          </div>
+
+          <div class="inquiry__row">
+            <label class="field">
+              <span class="field__label">Guest Count</span>
+              <input type="number" name="guest_count" min="1" />
+            </label>
+            <div class="field field--radios">
+              <span class="field__label">Indoor or Outdoor</span>
+              <div class="field__options">
+                <label><input type="radio" name="venue" value="Indoor" /> Indoor</label>
+                <label><input type="radio" name="venue" value="Outdoor" /> Outdoor</label>
+                <label><input type="radio" name="venue" value="Both" /> Both</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="inquiry__row">
+            <div class="field field--radios">
+              <span class="field__label">Trailer or Cart</span>
+              <div class="field__options">
+                <label><input type="radio" name="service_style" value="Trailer" /> Trailer</label>
+                <label><input type="radio" name="service_style" value="Cart" /> Cart</label>
+                <label><input type="radio" name="service_style" value="Not Sure" /> Not sure</label>
+              </div>
+            </div>
+            <label class="field">
+              <span class="field__label">Event Type</span>
+              <select name="event_type">
+                <option value="">Pick one…</option>
+                <option>Wedding</option>
+                <option>Birthday</option>
+                <option>Baby Shower</option>
+                <option>Corporate</option>
+                <option>Watch Party</option>
+                <option>School / Kids</option>
+                <option>Brand Activation</option>
+                <option>Other</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="field">
+            <span class="field__label">Special Accommodations</span>
+            <textarea name="accommodations" rows="2" placeholder="Allergies, sugar-free needs, theme requests, accessibility…"></textarea>
+          </label>
+
+          <div class="inquiry__row">
+            <label class="field">
+              <span class="field__label">Ideal Budget</span>
+              <select name="budget">
+                <option value="">Select a range…</option>
+                <option>Under $400</option>
+                <option>$400 – $700</option>
+                <option>$700 – $1,200</option>
+                <option>$1,200 – $2,000</option>
+                <option>$2,000+</option>
+              </select>
+            </label>
+            <div class="field field--radios">
+              <span class="field__label">Preferred Contact</span>
+              <div class="field__options">
+                <label><input type="radio" name="contact_pref" value="Text" /> Text</label>
+                <label><input type="radio" name="contact_pref" value="Email" /> Email</label>
+                <label><input type="radio" name="contact_pref" value="DM" /> Instagram DM</label>
+              </div>
+            </div>
+          </div>
+
+          <label class="field">
+            <span class="field__label">How did you hear about us?</span>
+            <select name="referral">
+              <option value="">Pick one…</option>
+              <option>Instagram</option>
+              <option>TikTok</option>
+              <option>Friend / Word of mouth</option>
+              <option>Saw the trailer at an event</option>
+              <option>Google</option>
+              <option>Other</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span class="field__label">Anything else?</span>
+            <textarea name="notes" rows="3" placeholder="Theme, colors, must-have flavors, vibe…"></textarea>
+          </label>
+
+          <button type="submit" class="btn btn--primary inquiry__submit">SEND MY INQUIRY</button>
+        </form>
+        </article>
+
+        <!-- MAP CARD (right, sticky on desktop) -->
+        <aside class="booking__card booking__map-card" aria-label="Service area">
+          <span class="card-tag card-tag--coral card-tag--right">service area</span>
+          <h3 class="booking__map-title">Where we roll</h3>
+          <p class="booking__map-sub">East Valley + Phoenix metro. Home base in Gilbert.</p>
+
+          <div class="booking__map">
+            <div class="metro-map-wrap">
+              <iframe
+                class="metro-map-frame"
+                src="https://www.google.com/maps?q=Gilbert,Arizona&z=10&t=m&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Fizzy Fix service area — East Valley and Phoenix metro, centered on Gilbert AZ"></iframe>
+
+              <!-- Brand badge overlay calling out home base -->
+              <span class="metro-map-badge" aria-hidden="true">
+                <span class="metro-map-badge__star">★</span>
+                <span class="metro-map-badge__text">
+                  <span class="metro-map-badge__kicker">HOME BASE</span>
+                  <span class="metro-map-badge__name">Gilbert, AZ</span>
+                </span>
+              </span>
+            </div>
+          </div>
+
+          <p class="booking__map-note">Outside our usual range? <a href="#inquiry">Ask us</a> — for the right event, we travel.</p>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- ============ PAST EVENTS GALLERY ============ -->
+    <section id="events" class="events section">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">Where We've Been</h2>
+        </header>
+
+        <div class="events-grid">
+          <figure class="event-tile">
+            <img src="public/images/wedding-gilbert.jpg" alt="Backyard wedding in Gilbert" onerror="this.parentElement.classList.add('event-tile--placeholder');" />
+            <figcaption class="event-tile__cap"><strong>Backyard Wedding</strong>Gilbert</figcaption>
+          </figure>
+          <figure class="event-tile">
+            <img src="public/images/suns-phoenix.jpg" alt="Phoenix Suns activation" onerror="this.parentElement.classList.add('event-tile--placeholder');" />
+            <figcaption class="event-tile__cap"><strong>Phoenix Suns Activation</strong>Phoenix</figcaption>
+          </figure>
+          <figure class="event-tile">
+            <img src="public/images/dmc-scottsdale.jpg" alt="Desert Moms Club kickoff" onerror="this.parentElement.classList.add('event-tile--placeholder');" />
+            <figcaption class="event-tile__cap"><strong>Desert Moms Club Kickoff</strong>Scottsdale</figcaption>
+          </figure>
+          <figure class="event-tile">
+            <img src="public/images/sweet16-mesa.jpg" alt="Sweet 16 party in Mesa" onerror="this.parentElement.classList.add('event-tile--placeholder');" />
+            <figcaption class="event-tile__cap"><strong>Sweet 16 Party</strong>Mesa</figcaption>
+          </figure>
+          <figure class="event-tile">
+            <img src="public/images/valleygirl-tempe.jpg" alt="Valley Girl pop-up in Tempe" onerror="this.parentElement.classList.add('event-tile--placeholder');" />
+            <figcaption class="event-tile__cap"><strong>Valley Girl Pop-Up</strong>Tempe</figcaption>
+          </figure>
+          <figure class="event-tile">
+            <img src="public/images/polar-chandler.jpg" alt="Polar Express kids party in Chandler" onerror="this.parentElement.classList.add('event-tile--placeholder');" />
+            <figcaption class="event-tile__cap"><strong>Polar Express Kids Party</strong>Chandler</figcaption>
+          </figure>
+          <figure class="event-tile">
+            <img src="public/images/corporate-phoenix.jpg" alt="Corporate holiday mixer in Phoenix" onerror="this.parentElement.classList.add('event-tile--placeholder');" />
+            <figcaption class="event-tile__cap"><strong>Corporate Holiday Mixer</strong>Phoenix</figcaption>
+          </figure>
+          <figure class="event-tile">
+            <img src="public/images/babyshower-qc.jpg" alt="Baby shower in Queen Creek" onerror="this.parentElement.classList.add('event-tile--placeholder');" />
+            <figcaption class="event-tile__cap"><strong>Baby Shower</strong>Queen Creek</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- wave: events -> testimonials (gentle single hill) -->
+    <svg class="wave wave--medium" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
+      <rect width="1440" height="100" fill="#F8E8C8" />
+      <path d="M0,55 C400,15 1040,15 1440,55 L1440,100 L0,100 Z" fill="#E5757F" />
+    </svg>
+
+    <!-- ============ TESTIMONIALS (placeholder copy — swap with real reviews from Shara) ============ -->
+    <section class="testimonials section">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">What the Fizz Fam Says</h2>
+          <p class="section__sub">Real talk from real events.</p>
+        </header>
+
+        <div class="quote-grid">
+          <article class="quote-card" style="--tilt: -2.2deg;">
+            <div class="quote-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="quote-card__quote">Shara made our wedding so much fun. The drinks were the highlight and the trailer photos are still our most-liked post from the day.</p>
+            <p class="quote-card__attr"><strong>Sarah M.</strong> · Bride, Gilbert AZ</p>
+          </article>
+
+          <article class="quote-card" style="--tilt: 1.5deg;">
+            <div class="quote-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="quote-card__quote">Booked Fizzy Fix for our daughter's Sweet 16 and the kids would not stop talking about the custom pink drinks. 10/10.</p>
+            <p class="quote-card__attr"><strong>Jenna R.</strong> · Mom, Mesa AZ</p>
+          </article>
+
+          <article class="quote-card" style="--tilt: -1.2deg;">
+            <div class="quote-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="quote-card__quote">We had Fizzy Fix at our Suns activation. Lines all night, brand looked amazing on social. The team loved the pink trailer.</p>
+            <p class="quote-card__attr"><strong>Marcus T.</strong> · Phoenix Suns Marketing</p>
+          </article>
+
+          <article class="quote-card" style="--tilt: 2deg;">
+            <div class="quote-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="quote-card__quote">My son's 5th birthday — Shara built him a Blue's Clues themed drink and he STILL talks about it months later. Worth every penny.</p>
+            <p class="quote-card__attr"><strong>Ashley K.</strong> · Mom, Chandler AZ</p>
+          </article>
+
+          <article class="quote-card" style="--tilt: -1.6deg;">
+            <div class="quote-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="quote-card__quote">Hired them for my bridal shower and my mother-in-law literally asked me where to book them next. Top tier vibes, top tier drinks.</p>
+            <p class="quote-card__attr"><strong>Brooke L.</strong> · Bride-to-be, Queen Creek AZ</p>
+          </article>
+
+          <article class="quote-card" style="--tilt: 1.8deg;">
+            <div class="quote-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="quote-card__quote">Had Fizzy Fix at our Mother's Day pop-up and the line wrapped around the patio for two hours. The moms were obsessed.</p>
+            <p class="quote-card__attr"><strong>Daniella V.</strong> · Desert Moms Club, Tempe AZ</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- wave: testimonials -> meet (gentle single hill, coral → cream) -->
+    <svg class="wave wave--medium" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
+      <rect width="1440" height="100" fill="#E5757F" />
+      <path d="M0,55 C400,15 1040,15 1440,55 L1440,100 L0,100 Z" fill="#FBF3E5" />
+    </svg>
+
+    <!-- ============ MEET SHARA ============ -->
+    <section class="meet section">
+      <img class="meet__decor meet__decor--orange" src="public/images/decor-orange.png" alt="" aria-hidden="true" />
+      <img class="meet__decor meet__decor--cherries" src="public/images/decor-cherries.png" alt="" aria-hidden="true" />
+      <div class="container meet__inner">
+        <div class="meet__photo">
+          <img src="public/images/shara-portrait.jpg" alt="Shara, owner of Fizzy Fix" />
+        </div>
+
+        <div class="meet__copy">
+          <h2 class="meet__title">Hi, I'm Shara</h2>
+          <p class="meet__body">I'm the soda-sippin', flavor-mixin' gal behind Fizzy Fix. I started with a fizzy dream and a pink trailer, and now we're popping up at weddings, baby showers, watch parties, and Phoenix Suns games. When I'm not behind the counter, I'm chasing my toddler or planning the next seasonal menu. Bring your besties, pull someone for a chat, and come sip on something 100% your type on paper.</p>
+
+          <p class="meet__follow">Follow along on Instagram <a href="https://instagram.com/fizzyfixaz" target="_blank" rel="noopener">@fizzyfixaz <span aria-hidden="true">→</span></a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- wave: meet -> faq (gentle single hill) -->
+    <svg class="wave wave--medium" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
+      <rect width="1440" height="100" fill="#FBF3E5" />
+      <path d="M0,55 C400,15 1040,15 1440,55 L1440,100 L0,100 Z" fill="#F9DDD8" />
+    </svg>
+
+    <!-- ============ FAQ ============ -->
+    <section id="faq" class="faq section">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">Frequently Asked</h2>
+        </header>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>How far in advance should I book?</summary>
+            <p>Most weekends in spring and fall fill 2 to 3 months out. For weddings or large corporate events we recommend booking 4 to 6 months ahead. Last-minute? DM us and we'll see what we can do.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do you travel outside the East Valley?</summary>
+            <p>Yes. Our usual range covers Gilbert, Mesa, Chandler, Tempe, Scottsdale, Phoenix, Glendale, Peoria, and Queen Creek. Travel outside that range may include a small fee, just ask.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What's included in each package?</summary>
+            <p>Every package includes the trailer or cart, our staff, cups, ice, and the drink lineup you pick. Custom signature drinks, themed cups, and extended hours are available as add-ons.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What if my event is outdoors?</summary>
+            <p>We thrive outdoors. We'll need a flat space to park the trailer plus access to a power source or a generator (we can help arrange one). For Arizona summer events, ask us about shade setup options.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do you offer sugar-free or non-caffeinated options?</summary>
+            <p>Yes! Most flavors can be made with sugar-free bases, and we always have a no-caffeine option on the menu. Let us know your guest list's needs and we'll build the menu around it.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Will you create a custom drink for my event?</summary>
+            <p>Absolutely — that's our favorite ask. We'll build a signature drink in your colors, your theme, with a custom name. Available as part of every package on request.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What's your cancellation policy?</summary>
+            <p>Deposits are non-refundable but transferable to a new date within 12 months, subject to availability. Full policy is included in your booking confirmation.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- wave: faq -> final-cta (gentle single hill into closing band) -->
+    <svg class="wave wave--medium" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
+      <rect width="1440" height="100" fill="#F9DDD8" />
+      <path d="M0,55 C400,15 1040,15 1440,55 L1440,100 L0,100 Z" fill="#2F5D3A" />
+    </svg>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="final-cta">
+      <div class="container">
+        <h2 class="final-cta__headline">Ready to <span class="script-accent">book?</span></h2>
+        <p class="final-cta__sub">Let's bring the fizz to your event.</p>
+        <a href="#book" class="btn final-cta__btn">Book Your Event</a>
+        <p class="final-cta__alt">Or slide into our DMs <a href="https://instagram.com/fizzyfixaz" target="_blank" rel="noopener">@fizzyfixaz</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <img class="footer__mascot" src="public/images/mascot-cup.png" alt="" aria-hidden="true" />
+
+    <div class="container footer__inner">
+      <div class="footer__col footer__col--brand">
+        <a href="#top" class="footer__logo" aria-label="Fizzy Fix home">
+          <img src="public/images/logo.png" alt="Fizzy Fix mobile dirty soda trailer" />
+        </a>
+        <p class="footer__tagline">Made with love in Gilbert, AZ.</p>
+      </div>
+
+      <nav class="footer__col footer__nav" aria-label="Footer">
+        <a href="#menu">Menu</a>
+        <a href="#events">Events</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+        <a href="#book">Book</a>
+      </nav>
+
+      <div class="footer__col footer__col--contact">
+        <div class="footer__social">
+          <a href="https://instagram.com/fizzyfixaz" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://tiktok.com/@fizzyfixaz" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 6.32a4.83 4.83 0 0 1-2.86-1 4.83 4.83 0 0 1-1.93-3.32h-3.5v13.4a2.6 2.6 0 1 1-1.86-2.5v-3.6a6.1 6.1 0 1 0 5.36 6.05V9.07a8.32 8.32 0 0 0 4.79 1.51v-3.5a5 5 0 0 1 0-.76z"/></svg>
+          </a>
+          <a href="https://facebook.com/fizzyfixaz" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396z"/></svg>
+          </a>
+        </div>
+        <a class="footer__linktree" href="https://linktr.ee/fizzyfix" target="_blank" rel="noopener">linktr.ee/fizzyfix</a>
+        <a href="mailto:hello@fizzyfixaz.com" class="footer__email">hello@fizzyfixaz.com</a>
+      </div>
+    </div>
+
+    <div class="footer__divider checker-band" aria-hidden="true"></div>
+    <p class="footer__copy">© Fizzy Fix 2026</p>
+  </footer>
+
+  <!-- toast for form submit -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- GSAP from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="script.js?v=20260515b"></script>
+</body>
+</html>

@@ -1024,28 +1024,28 @@ button { font-family: inherit; cursor: pointer; }
   filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.22));
 }
 .callout-band__fruit--watermelon {
-  top: 8%;
-  left: 3%;
-  width: 150px;
+  top: 6%;
+  left: 2%;
+  width: 200px;
   transform: rotate(-8deg);
 }
 .callout-band__fruit--lemon {
-  bottom: 8%;
-  right: 3%;
-  width: 130px;
+  bottom: 6%;
+  right: 2%;
+  width: 180px;
   transform: rotate(12deg);
 }
 @media (min-width: 768px) {
-  .callout-band__fruit--watermelon { top: 10%; left: 5%;  width: 200px; }
-  .callout-band__fruit--lemon      { bottom: 10%; right: 5%; width: 180px; }
+  .callout-band__fruit--watermelon { top: 8%; left: 4%;  width: 290px; }
+  .callout-band__fruit--lemon      { bottom: 8%; right: 4%; width: 260px; }
 }
 @media (min-width: 1200px) {
-  .callout-band__fruit--watermelon { top: 12%; left: 7%;  width: 240px; }
-  .callout-band__fruit--lemon      { bottom: 12%; right: 7%; width: 210px; }
+  .callout-band__fruit--watermelon { top: 10%; left: 6%;  width: 360px; }
+  .callout-band__fruit--lemon      { bottom: 10%; right: 6%; width: 320px; }
 }
 @media (max-width: 720px) {
-  .callout-band__fruit--watermelon { top: 2%; left: -3%; width: 110px; }
-  .callout-band__fruit--lemon      { bottom: 2%; right: -3%; width: 100px; }
+  .callout-band__fruit--watermelon { top: 2%; left: -4%; width: 140px; }
+  .callout-band__fruit--lemon      { bottom: 2%; right: -4%; width: 130px; }
 }
 
 .toggle-wrap { text-align: center; }

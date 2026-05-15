@@ -129,6 +129,52 @@
     });
   }
 
+  /* ---------- 6c. Event tile lightbox ---------- */
+  const lightbox = document.getElementById('eventLightbox');
+  if (lightbox) {
+    const lbImg = lightbox.querySelector('.lightbox__img');
+    const lbTitle = lightbox.querySelector('#lightboxTitle');
+    const lbLoc = lightbox.querySelector('#lightboxLoc');
+    const lbClose = lightbox.querySelector('.lightbox__close');
+    let lastFocused = null;
+
+    const openLightbox = (btn) => {
+      lastFocused = btn;
+      lbImg.src = btn.dataset.src;
+      lbImg.alt = btn.dataset.title + ' in ' + btn.dataset.loc;
+      lbTitle.textContent = btn.dataset.title;
+      lbLoc.textContent = btn.dataset.loc;
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      // focus close button for keyboard users
+      requestAnimationFrame(() => lbClose.focus());
+    };
+
+    const closeLightbox = () => {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      lbImg.src = '';
+      if (lastFocused) lastFocused.focus();
+    };
+
+    document.querySelectorAll('.event-tile__btn').forEach((btn) => {
+      btn.addEventListener('click', () => openLightbox(btn));
+    });
+
+    lbClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      // click on backdrop (not the image or caption) closes
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('is-open')) {
+        closeLightbox();
+      }
+    });
+  }
+
   /* ---------- 7. Smooth scroll polish ---------- */
   document.querySelectorAll('a[href^="#"]').forEach((a) => {
     a.addEventListener('click', (e) => {

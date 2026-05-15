@@ -1243,63 +1243,201 @@ button { font-family: inherit; cursor: pointer; }
 .events-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 28px;
+  gap: 36px;
 }
-@media (min-width: 540px) { .events-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; } }
-@media (min-width: 1024px) { .events-grid { grid-template-columns: repeat(4, 1fr); gap: 32px; } }
+@media (min-width: 540px) { .events-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; } }
+@media (min-width: 1024px) { .events-grid { grid-template-columns: repeat(4, 1fr); gap: 44px 32px; } }
 
 .event-tile {
-  position: relative;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.event-tile__btn {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+  display: block;
+}
+.event-tile__btn:focus-visible {
+  outline: 3px solid var(--green-deep);
+  outline-offset: 4px;
+  border-radius: 50% / 30%;
+}
+
+.event-tile__media {
+  position: relative;
+  width: 100%;
   border-radius: 50% / 30%;
   overflow: hidden;
   aspect-ratio: 4 / 5;
   box-shadow: var(--shadow-card);
   background: var(--blush);
+  transition: transform 380ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 380ms ease;
 }
-.event-tile img {
+.event-tile__media img {
   width: 100%; height: 100%;
   object-fit: cover;
-  transition: transform .35s ease;
+  transition: transform 480ms ease;
+  display: block;
 }
-.event-tile:hover img { transform: scale(1.05); }
-/* fallback when image fails to load */
-.event-tile--placeholder { background: var(--blush); }
-.event-tile--placeholder img { display: none; }
-.event-tile--placeholder::before {
-  content: "Photo coming soon";
-  position: absolute; inset: 0;
-  display: flex; align-items: center; justify-content: center;
-  color: var(--green-deep);
-  font-family: var(--font-display);
-  font-size: 16px;
-  text-align: center;
-  padding: 24px;
+
+/* hover: lift the card, zoom the image, hint at clickability */
+.event-tile__btn:hover .event-tile__media,
+.event-tile__btn:focus-visible .event-tile__media {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.22), 0 4px 8px rgba(0, 0, 0, 0.08);
 }
-.event-tile__cap {
+.event-tile__btn:hover .event-tile__media img,
+.event-tile__btn:focus-visible .event-tile__media img {
+  transform: scale(1.08);
+}
+/* magnifier icon that fades in on hover */
+.event-tile__media::after {
+  content: "";
   position: absolute;
-  inset: 0;
+  top: 50%; left: 50%;
+  width: 48px; height: 48px;
+  margin: -24px 0 0 -24px;
+  border-radius: 50%;
+  background: rgba(251, 243, 229, 0.92) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24' fill='none' stroke='%232F5D3A' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><circle cx='10.5' cy='10.5' r='6.5'/><line x1='15.5' y1='15.5' x2='21' y2='21'/></svg>") center/22px no-repeat;
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 280ms ease, transform 280ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+.event-tile__btn:hover .event-tile__media::after,
+.event-tile__btn:focus-visible .event-tile__media::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Caption — now BELOW the photo, always visible */
+.event-tile__cap {
+  margin: 14px 8px 0;
+  color: var(--green-deep);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.35;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  padding: 24px;
-  margin: 0;
-  background: linear-gradient(to top, rgba(42, 42, 42, 0.82) 0%, rgba(42, 42, 42, 0) 55%);
-  color: var(--cream);
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-align: center;
+  gap: 2px;
 }
 .event-tile__cap strong {
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: 20px;
-  color: var(--cream);
+  font-size: 22px;
+  color: var(--green-deep);
   letter-spacing: 0;
+  line-height: 1.15;
+}
+.event-tile__cap span {
+  color: var(--charcoal);
+  opacity: 0.7;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ============================================================
+   LIGHTBOX (click-to-enlarge for event photos)
+   ============================================================ */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 20, 20, 0.86);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  transition: opacity 280ms ease;
+}
+.lightbox.is-open {
+  display: flex;
+  opacity: 1;
+}
+.lightbox__inner {
+  position: relative;
+  max-width: min(900px, 92vw);
+  max-height: 86vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(0.92);
+  transition: transform 320ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.lightbox.is-open .lightbox__inner {
+  transform: scale(1);
+}
+.lightbox__img {
+  max-width: 100%;
+  max-height: 72vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 14px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  background: var(--cream);
+}
+.lightbox__cap {
+  margin-top: 16px;
+  text-align: center;
+  color: var(--cream);
+  line-height: 1.3;
+}
+.lightbox__cap strong {
   display: block;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 26px;
+  letter-spacing: 0;
   margin-bottom: 4px;
+}
+.lightbox__cap span {
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  opacity: 0.85;
+}
+.lightbox__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  background: var(--cream);
+  color: var(--green-deep);
+  border: 0;
+  border-radius: 50%;
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  z-index: 2;
+  transition: transform 200ms ease;
+}
+.lightbox__close:hover { transform: scale(1.06); }
+
+@media (prefers-reduced-motion: reduce) {
+  .lightbox,
+  .lightbox__inner,
+  .event-tile__media,
+  .event-tile__media img,
+  .event-tile__media::after { transition: none; }
 }
 
 /* ============================================================

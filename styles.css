@@ -982,9 +982,71 @@ button { font-family: inherit; cursor: pointer; }
 /* ============================================================
    PACKAGES — PICK YOUR POUR (cream bg, coral-pink title)
    ============================================================ */
-.book { background: var(--cream); padding: 96px 0; }
+.book {
+  background: var(--cream);
+  padding: 96px 0;
+  position: relative;
+  overflow: hidden;
+}
 @media (min-width: 768px) { .book { padding: 120px 0; } }
 .book .section__title { color: var(--coral-pink); }
+.book .container { position: relative; z-index: 2; }
+
+/* sparkle cluster decoration in Pick Your Pour — top-right corner accent */
+.book__sparkle-cluster {
+  position: absolute;
+  top: 28px;
+  right: -30px;
+  width: 150px;
+  max-width: none;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.85;
+  transform: rotate(8deg);
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.08));
+}
+@media (min-width: 768px) {
+  .book__sparkle-cluster { top: 56px; right: 24px; width: 210px; }
+}
+@media (min-width: 1200px) {
+  .book__sparkle-cluster { top: 72px; right: 48px; width: 250px; }
+}
+@media (max-width: 540px) {
+  .book__sparkle-cluster { width: 120px; top: 18px; right: -25px; }
+}
+
+/* large fruit decorations in the callout band — corners, off-center */
+.callout-band__fruit {
+  position: absolute;
+  z-index: 2;
+  max-width: none;
+  pointer-events: none;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.22));
+}
+.callout-band__fruit--watermelon {
+  top: 8%;
+  left: 3%;
+  width: 150px;
+  transform: rotate(-8deg);
+}
+.callout-band__fruit--lemon {
+  bottom: 8%;
+  right: 3%;
+  width: 130px;
+  transform: rotate(12deg);
+}
+@media (min-width: 768px) {
+  .callout-band__fruit--watermelon { top: 10%; left: 5%;  width: 200px; }
+  .callout-band__fruit--lemon      { bottom: 10%; right: 5%; width: 180px; }
+}
+@media (min-width: 1200px) {
+  .callout-band__fruit--watermelon { top: 12%; left: 7%;  width: 240px; }
+  .callout-band__fruit--lemon      { bottom: 12%; right: 7%; width: 210px; }
+}
+@media (max-width: 720px) {
+  .callout-band__fruit--watermelon { top: 2%; left: -3%; width: 110px; }
+  .callout-band__fruit--lemon      { bottom: 2%; right: -3%; width: 100px; }
+}
 
 .toggle-wrap { text-align: center; }
 .toggle-group {

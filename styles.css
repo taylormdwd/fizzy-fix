@@ -1896,6 +1896,41 @@ button { font-family: inherit; cursor: pointer; }
 }
 .final-cta__btn { font-size: 15px; padding: 18px 40px; background: var(--coral-pink); color: var(--cream); }
 .final-cta__btn:hover { background: var(--cream); color: var(--green-deep); }
+
+/* ============================================================
+   BUTTON SPARKLES — floating glints around CTA buttons
+   ============================================================ */
+.btn-sparkle-wrap {
+  position: relative;
+  display: inline-block;
+  /* extra padding gives sparkles room to live outside the button without clipping */
+  padding: 18px 24px;
+  margin: -18px -24px;
+}
+.btn-sparkle {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  will-change: transform, opacity;
+  z-index: 3;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
+}
+/* 5 sparkles around + lightly on the button, each with its own size/position/timing */
+.btn-sparkle--a { top: 4px;    left: 8px;   width: 14px; animation: btnSparkle 2.8s ease-in-out 0.0s infinite; }
+.btn-sparkle--b { top: -2px;   right: 14px; width: 18px; animation: btnSparkle 3.2s ease-in-out 0.7s infinite; }
+.btn-sparkle--c { bottom: 2px; left: 30%;   width: 10px; animation: btnSparkle 2.4s ease-in-out 1.3s infinite; }
+.btn-sparkle--d { bottom: -2px;right: 6px;  width: 16px; animation: btnSparkle 3.0s ease-in-out 0.4s infinite; }
+.btn-sparkle--e { top: 50%;    right: -4px; width: 12px; margin-top: -6px; animation: btnSparkle 2.6s ease-in-out 1.8s infinite; }
+
+@keyframes btnSparkle {
+  0%, 100% { opacity: 0;   transform: translateY(0)    scale(0.5) rotate(0deg); }
+  30%      { opacity: 1;   transform: translateY(-2px) scale(1)   rotate(20deg); }
+  60%      { opacity: 0.55;transform: translateY(-4px) scale(0.8) rotate(-12deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-sparkle { animation: none; opacity: 0.7; }
+}
 .final-cta__alt { margin: 26px 0 0; font-size: 16px; color: var(--cream); opacity: 0.92; }
 .final-cta__alt a { color: var(--cream); font-weight: 700; text-decoration: underline; }
 @media (min-width: 768px) {

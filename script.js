@@ -175,6 +175,33 @@
     });
   }
 
+  /* ---------- 6d. FAQ reveal on scroll (staggered fade-up) ---------- */
+  const faqItems = document.querySelectorAll('.faq-item');
+  if (faqItems.length && 'IntersectionObserver' in window) {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) {
+      faqItems.forEach((el) => el.classList.add('is-revealed'));
+    } else {
+      const revealedOrder = [];
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !entry.target.classList.contains('is-revealed')) {
+            const idx = revealedOrder.length;
+            revealedOrder.push(entry.target);
+            // stagger by 90ms per item in the batch, capped so it never feels slow
+            const delay = Math.min(idx * 90, 540);
+            setTimeout(() => entry.target.classList.add('is-revealed'), delay);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -60px 0px', threshold: 0.15 });
+      faqItems.forEach((el) => observer.observe(el));
+    }
+  } else if (faqItems.length) {
+    // older browsers — just show them
+    faqItems.forEach((el) => el.classList.add('is-revealed'));
+  }
+
   /* ---------- 7. Smooth scroll polish ---------- */
   document.querySelectorAll('a[href^="#"]').forEach((a) => {
     a.addEventListener('click', (e) => {

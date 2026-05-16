@@ -1966,9 +1966,13 @@ button { font-family: inherit; cursor: pointer; }
 .footer__mascot {
   position: absolute;
   bottom: 0; left: 32px;
-  height: 200px; width: auto;
+  height: 290px; width: auto;
+  max-width: none;
   z-index: 2;
   pointer-events: none;
+}
+@media (max-width: 720px) {
+  .footer__mascot { height: 210px; left: 16px; }
 }
 .footer__inner {
   display: grid;
